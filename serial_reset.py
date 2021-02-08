@@ -9,10 +9,9 @@ if __name__ == '__main__':
     if len(argv) != 2:
         print("usage:\n python {} DEVICE".format(argv[0]))
         sys.exit()
-    
+   
     device = argv[1]
 
-    print("{}".format(device))
     ser = serial.Serial(device,115200,timeout=None)
 
     ser.dtr=False
